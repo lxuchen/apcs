@@ -1,0 +1,34 @@
+# macOS system files
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# VS Code settings backup files
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+
+# Java compiled files
+*.class
+*.jar
+*.war
+*.ear
+
+# Build directories (if any tools generate these)
+bin/
+out/
+build/
+target/
+
+# Temporary files
+*.log
+*.tmp
+
+# Backup / autosave files
+*.swp
+*.swo
+*~
+
+# Ignore playground artifacts
+playground/*.class
