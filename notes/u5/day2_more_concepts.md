@@ -66,13 +66,6 @@ s1.equals(s2)     // true
     - Every object in Java is guaranteed to have behaviors defined in Object
 
 
-## Questions
-
-- How to tell a valid overloaded method?
-    - Pay attention to the same name
-    - but different number / type of parameters
-    - that's it! different return types don't count!
-
 ## Examples
 
 ```
@@ -128,3 +121,11 @@ public class Student
     }
 
 }
+
+
+## Questions
+
+- How to tell a valid overloaded method?
+    - Pay attention to the same name
+    - but different number / type of parameters
+    - that's it! different return types don't count!
