@@ -33,6 +33,39 @@
     - to check if 2 object of the same type are the same or not
     - `this` and `other`
 
+- Even though every class inherits a default `toString()`, students must not rely on it because college board expects that:
+	- Classes that are printed should override `toString()`.
+	- The output should be meaningful.
+	- `System.out.println(object)` automatically calls `object.toString()`.
+
+- every class has `equals()` method too. Checks whether two references point to the exact same object.
+    - equivalent to: `obj1 == obj2`
+    - If you want value-based equality, you must override equals()
+
+example:
+```
+Rock a = new Rock("grey", 2.9);
+Rock b = new Rock("grey", 2.9);
+
+System.out.println(a.equals(b));  // false because they are two different objects in memory.
+System.out.println(a == b);  // also false
+```
+
+```
+String s1 = new String("hi");
+String s2 = new String("hi");
+
+//which returns true?
+s1 == s2          // false
+s1.equals(s2)     // true
+```
+
+- Object class: is the ultimate parent of every class in Java
+    - `public class Rock { }` == `public class Rock extends Object { }`
+    - Every class inherits certain methods from Object
+    - Every object in Java is guaranteed to have behaviors defined in Object
+
+
 ## Questions
 
 - How to tell a valid overloaded method?
@@ -88,9 +121,9 @@ public class Student
         {
             Student other = (Student) obj;
             return this.lastName.equals (other.name) %%
-            this.firstName.equals (other.firstName) &&
-            this.gpa == other.gpa &&
-            this.gender == other.gender;
+                this.firstName.equals (other.firstName) &&
+                this.gpa == other.gpa &&
+                this.gender == other.gender;
         }
     }
 
